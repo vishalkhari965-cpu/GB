@@ -1,0 +1,10 @@
+{
+  "name": "Ludo Studio",
+  "short_name": "Ludo Studio",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#ef4444",
+  "description": "A customizable Ludo game with computer and local friend modes.",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

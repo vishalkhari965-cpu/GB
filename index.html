@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludo Studio</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#ef4444" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-panel">
+        <header class="game-header">
+          <div>
+            <p class="eyebrow">CUSTOMIZABLE BOARD GAME</p>
+            <h1 id="gameTitle">Ludo Studio</h1>
+          </div>
+          <button id="newGameBtn" class="secondary">नई गेम</button>
+        </header>
+
+        <div class="status-card">
+          <span id="turnDot" class="turn-dot"></span>
+          <strong id="statusText">लाल खिलाड़ी की बारी</strong>
+          <span id="diceText">पासा फेंकें</span>
+        </div>
+
+        <div id="board" class="board" aria-label="Ludo board"></div>
+
+        <div class="controls">
+          <button id="rollBtn" class="roll">🎲 पासा फेंकें</button>
+          <p id="hint">शुरू करने के लिए पासा फेंकें। 6 आने पर गोटी घर से निकलती है।</p>
+        </div>
+      </section>
+
+      <aside class="customizer">
+        <div class="side-title">
+          <p class="eyebrow">MAKE IT YOURS</p>
+          <h2>कस्टमाइज़ करें</h2>
+        </div>
+
+        <label>गेम का नाम<input id="titleInput" value="Ludo Studio" maxlength="28" /></label>
+        <label>खिलाड़ी<input id="playersInput" type="number" min="2" max="4" value="4" /></label>
+        <label>थीम
+          <select id="themeSelect">
+            <option value="sunset">Sunset</option>
+            <option value="ocean">Ocean</option>
+            <option value="mint">Mint</option>
+            <option value="midnight">Midnight</option>
+          </select>
+        </label>
+        <label>गेम मोड
+          <select id="modeSelect">
+            <option value="computer">कंप्यूटर के साथ</option>
+            <option value="friends">दोस्तों के साथ (एक ही फोन)</option>
+          </select>
+        </label>
+        <label>जितने की गोटियाँ<input id="winInput" type="number" min="1" max="4" value="4" /></label>
+
+        <div id="playerSettings" class="player-settings"></div>
+        <button id="applyBtn" class="primary">सेटिंग्स लागू करें</button>
+
+        <div class="rules">
+          <h3>इस starter app में</h3>
+          <ul>
+            <li>2–4 खिलाड़ी और नाम बदलें</li>
+            <li>रंग और visual theme बदलें</li>
+            <li>पासा, चाल और turn system</li>
+            <li>1 या 6 पर गोटी बाहर निकालें</li>
+            <li>कंप्यूटर या पास-एंड-प्ले दोस्त mode</li>
+            <li>Android पर install करने योग्य</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
